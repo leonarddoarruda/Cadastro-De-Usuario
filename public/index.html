@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeoDev.AI – Criar Conta</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="logo">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#4285f4" opacity=".15" />
+          <path
+            d="M10 26L18 10l8 16M13 21h10"
+            stroke="#4285f4"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="logo-name">LeoDev<span>.AI</span></span>
+      </div>
+
+      <p class="tagline">Otimize sua presença de desenvolvedor</p>
+
+      <div class="alert" id="alert"></div>
+
+      <form id="registerForm" novalidate>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <div class="input-wrap">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Leonardo Arruda"
+              autocomplete="name"
+            />
+          </div>
+          <span class="error-msg" id="nomeErr"
+            >Por favor, insira seu nome.</span
+          >
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <div class="input-wrap">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M2 8l10 7 10-7" />
+            </svg>
+            <input
+              type="email"
+              id="email"
+              placeholder="voce@gmail.com"
+              autocomplete="email"
+            />
+          </div>
+          <span class="error-msg" id="emailErr">Insira um e-mail válido.</span>
+        </div>
+
+        <div class="field">
+          <label for="senha">Senha</label>
+          <div class="input-wrap">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="5" y="11" width="14" height="10" rx="2" />
+              <path d="M8 11V7a4 4 0 018 0v4" />
+            </svg>
+            <input
+              type="password"
+              id="senha"
+              placeholder="••••••••"
+              autocomplete="new-password"
+            />
+            <button type="button" class="toggle-pw" onclick="togglePw()">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                height="18"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
+          </div>
+          <p class="hint">Deve ter pelo menos 8 caracteres.</p>
+          <span class="error-msg" id="senhaErr">Mínimo 8 caracteres.</span>
+        </div>
+
+        <div class="field">
+          <label for="celular">Celular</label>
+          <div class="input-wrap">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <path d="M12 18h.01" />
+            </svg>
+            <input
+              type="tel"
+              id="celular"
+              placeholder="(47) 91234-5678"
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="termos" />
+          <label for="termos"
+            >Eu concordo com os <a href="#">Termos</a> e
+            <a href="#">Política de Privacidade</a></label
+          >
+        </div>
+
+        <button type="submit" class="btn-primary" id="btnCadastro">
+          <div class="spinner" id="spinner"></div>
+          <span id="btnTexto">Criar Conta</span>
+        </button>
+
+        <p class="login-link">Já tem um</p>
+      </form>
+    </div>
+  </body>
+</html>
